@@ -76,21 +76,27 @@ public class Main {
 				lavatriceSelezionata.setTemperatura(temp);
 				break;
 				
-			case "4": 	//aggiungi detersivo 				
+			case "4": 	//imposta numero di giri 
+				System.out.print("Inserisci il numero di giri: ");
+				int giri=Integer.parseInt(s.nextLine());
+				lavatriceSelezionata.setVelocitàRotazione(giri);;
+				break;
+				
+			case "5": 	//aggiungi detersivo 				
 				lavatriceSelezionata.aggiungiDetersivo();
 				break;
 				
-			case "5": 	//aggiungi moneta 	
+			case "6": 	//aggiungi moneta 	
 				System.out.print("Che moneta vuoi aggiungere? ");
 				float moneta=Float.parseFloat(s.nextLine());
 				lavatriceSelezionata.aggiungiMoneta(moneta);
 				break;
 				
-			case "6": 	//avvio 				
+			case "7": 	//avvio 				
 				lavatriceSelezionata.start();
 				break;
 				
-			case "7": 	//stop 				
+			case "8": 	//stop 				
 				lavatriceSelezionata.stop();
 				break;
 				
@@ -113,10 +119,11 @@ public class Main {
 		System.out.println("1) Scegli lavatrice");
 		System.out.println("2) Aggiungi acqua");
 		System.out.println("3) Imposta temperatura");
-		System.out.println("4) Aggiungi detersivo");
-		System.out.println("5) Aggiungi moneta");
-		System.out.println("6) Avvio");
-		System.out.println("7) Stop");
+		System.out.println("4) Imposta numero giri");
+		System.out.println("5) Aggiungi detersivo");
+		System.out.println("6) Aggiungi moneta");		
+		System.out.println("7) Avvio");
+		System.out.println("8) Stop");
 		System.out.println("9) Esci");		
 		
 	}
