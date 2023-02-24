@@ -1,6 +1,7 @@
 package it.edu.iisvolta;
 
 import java.time.LocalTime;
+import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class Lavatrice {
 	private int capacità;
@@ -104,6 +105,12 @@ public class Lavatrice {
 	}
 	
 	public String getStato() {
+		LocalTime lt=LocalTime.now(); 	//data/ora corrente
+		
+		if (stato==1 && 								// lavaggio in corso
+			SECONDS.between(dataOraAvvio, lt)>60)		// sono passati più di 60 secondi
+			stato=2;		// lavaggio terminato
+		
 		switch(stato) {
 			case 0:
 				return "libera";
