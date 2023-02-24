@@ -107,7 +107,7 @@ public class Main {
 			
 			
 		} while (!scelta.equals("9"));
-		
+		s.close();
 		
 
 	}
