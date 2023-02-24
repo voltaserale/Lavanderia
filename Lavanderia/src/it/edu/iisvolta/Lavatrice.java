@@ -15,7 +15,7 @@ public class Lavatrice {
 	
 	public Lavatrice(int capacità) {
 		super();
-		if (capacità!=8 || capacità!= 10 || capacità!=14) {
+		if (capacità!=8 && capacità!= 10 && capacità!=14) {
 			System.out.println("Capacità non valida. Impostata capacità predefinita 8 kg");
 			this.capacità=8;
 		} else			
