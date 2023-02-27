@@ -20,23 +20,9 @@ public class Main {
 			menu();
 			Console.setCursorPosition(1, 70);
 			System.out.print("Lavatrice selezionata: "+numLavatrice);
-			Console.setCursorPosition(2, 70);
-			System.out.print("  capacità: "+lavatriceSelezionata.getCapacità());
-			Console.setCursorPosition(3, 70);
-			System.out.print("  stato: "+lavatriceSelezionata.getStato());
-			Console.setCursorPosition(4, 70);
-			System.out.print("  livello acqua: "+lavatriceSelezionata.getLivelloAcqua());
-			Console.setCursorPosition(5, 70);
-			System.out.print("  temperatura: "+lavatriceSelezionata.getTemperatura());
-			Console.setCursorPosition(6, 70);
-			System.out.print("  velocità rotazione: "+lavatriceSelezionata.getVelocitàRotazione());
-			Console.setCursorPosition(7, 70);
-			System.out.print("  detersivo: "+lavatriceSelezionata.detersivoAggiunto());
-			Console.setCursorPosition(8, 70);
-			System.out.print("  costo: "+lavatriceSelezionata.getCosto());
-			Console.setCursorPosition(9, 70);
-			System.out.print("  credito: "+lavatriceSelezionata.getCredito());
-			
+			mostraLavatrice(l1, 1);	//chiamata al metodo: indico il valore effettivo (argomento)
+			mostraLavatrice(l2, 11);	//chiamata al metodo: indico il valore effettivo (argomento)
+			mostraLavatrice(l3, 21);	//chiamata al metodo: indico il valore effettivo (argomento)
 			Console.setCursorPosition(15, 1);
 			
 			System.out.print("Inserisci la tua scelta: ");
@@ -131,6 +117,26 @@ public class Main {
 		System.out.println("9) Svuota");
 		System.out.println("0) Esci");
 		
+	}
+	
+	//dichiarazione metodo: indico parametri generici
+	private static void mostraLavatrice(Lavatrice lav, int posizioneY) {	
+		Console.setCursorPosition(posizioneY+2, 70);
+		System.out.print("  capacità: "+lav.getCapacità());
+		Console.setCursorPosition(posizioneY+3, 70);
+		System.out.print("  stato: "+lav.getStato());
+		Console.setCursorPosition(posizioneY+4, 70);
+		System.out.print("  livello acqua: "+lav.getLivelloAcqua());
+		Console.setCursorPosition(posizioneY+5, 70);
+		System.out.print("  temperatura: "+lav.getTemperatura());
+		Console.setCursorPosition(posizioneY+6, 70);
+		System.out.print("  velocità rotazione: "+lav.getVelocitàRotazione());
+		Console.setCursorPosition(posizioneY+7, 70);
+		System.out.print("  detersivo: "+lav.detersivoAggiunto());
+		Console.setCursorPosition(posizioneY+8, 70);
+		System.out.print("  costo: "+lav.getCosto());
+		Console.setCursorPosition(posizioneY+9, 70);
+		System.out.print("  credito: "+lav.getCredito());
 	}
 
 }
