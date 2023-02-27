@@ -20,7 +20,11 @@ public class Lavatrice {
 			this.capacità=8;
 		} else			
 			this.capacità = capacità;
+		inizializza();
 		
+	}
+	
+	private void inizializza() {
 		//inizializzazione attributi
 		livelloAcqua=0;
 		temperatura=0;
@@ -113,11 +117,12 @@ public class Lavatrice {
 		
 		switch(stato) {
 			case 0:
-				return "libera";
+				return "Libera";
 			case 1:
-				return "lavaggio in corso";
+				return "Lavaggio in corso. Tempo trascorso: "+ 
+						SECONDS.between(dataOraAvvio, lt) ;
 			case 2:
-				return "lavaggio terminato";
+				return "Lavaggio terminato";
 			default:
 				return "";
 		}
@@ -148,8 +153,9 @@ public class Lavatrice {
 	}
 		
 	public void svuota() {
-		if (stato==2)
-			stato=0;
+		if (stato==2) 
+			inizializza();		
+			
 		else if (stato==0)
 			System.out.println("Lavatrice già vuota");
 		else

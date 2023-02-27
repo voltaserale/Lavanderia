@@ -100,13 +100,17 @@ public class Main {
 				lavatriceSelezionata.stop();
 				break;
 				
+			case "9": 	//stop 				
+				lavatriceSelezionata.svuota();
+				break;
+				
 			}
 			System.out.println();
 			System.out.println("Premi Enter per continuare...");
 			s.nextLine();
 			
 			
-		} while (!scelta.equals("9"));
+		} while (!scelta.equals("0"));
 		s.close();
 		
 
@@ -124,7 +128,8 @@ public class Main {
 		System.out.println("6) Aggiungi moneta");		
 		System.out.println("7) Avvio");
 		System.out.println("8) Stop");
-		System.out.println("9) Esci");		
+		System.out.println("9) Svuota");
+		System.out.println("0) Esci");
 		
 	}
 
