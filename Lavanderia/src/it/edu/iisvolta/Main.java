@@ -3,7 +3,7 @@ package it.edu.iisvolta;
 import java.util.Scanner;
 
 public class Main {
-
+	//test push
 	public static void main(String[] args) {
 		// inizializzo le lavatrici
 		Scanner s=new Scanner(System.in);
